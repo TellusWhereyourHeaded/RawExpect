@@ -16,10 +16,10 @@ function addFling()
     local BG = Instance.new('BodyGyro', lp.Character.HumanoidRootPart)
     local BV = Instance.new('BodyVelocity', lp.Character.HumanoidRootPart)
     BG.P = 9e4
-    BG.maxTorque = Vector3.new(999,999,999)
+    BG.maxTorque = Vector3.new(9e1, 9e1, 9e1)
     BG.cframe = lp.Character.HumanoidRootPart.CFrame
     BV.velocity = Vector3.new(0, 0, 0)
-    BV.maxForce = Vector3.new(999, 999, 999)
+    BV.maxForce = Vector3.new(9e1, 9e1, 9e1)
     spawn(function()
         while wait() do
             pcall(function()BG.cframe = lp.Character.HumanoidRootPart.CFrame end)
@@ -27,7 +27,7 @@ function addFling()
     end)
     local BT = Instance.new("BodyThrust")
     BT.Parent = lp.Character.HumanoidRootPart
-    BT.Force = Vector3.new(9999,9999,9999)
+    BT.Force = Vector3.new(9e1,9e1,9e1)
     BT.Location = lp.Character.HumanoidRootPart.Position
 end; addFling()
 
