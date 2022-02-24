@@ -15,11 +15,11 @@ function addFling()
     for _, child in pairs(lp.Character:GetDescendants()) do if child:IsA'BasePart' then child.CustomPhysicalProperties = PhysicalProperties.new(1, 1, 1, 1, 1) end end
     local BG = Instance.new('BodyGyro', lp.Character.HumanoidRootPart)
     local BV = Instance.new('BodyVelocity', lp.Character.HumanoidRootPart)
-    BG.P = 9e4
-    BG.maxTorque = Vector3.new(9e5, 9e5, 9e5)
+    BG.P = 9e2
+    BG.maxTorque = Vector3.new(9e2, 9e2, 9e2)
     BG.cframe = lp.Character.HumanoidRootPart.CFrame
     BV.velocity = Vector3.new(0, 0, 0)
-    BV.maxForce = Vector3.new(9e5, 9e5, 9e5)
+    BV.maxForce = Vector3.new(9e2, 9e2, 9e2)
     spawn(function()
         while wait() do
             pcall(function()BG.cframe = lp.Character.HumanoidRootPart.CFrame end)
@@ -27,7 +27,7 @@ function addFling()
     end)
     local BT = Instance.new("BodyThrust")
     BT.Parent = lp.Character.HumanoidRootPart
-    BT.Force = Vector3.new(9e2, 9e2, 9e2)
+    BT.Force = Vector3.new(9e1, 9e1, 9e1)
     BT.Location = lp.Character.HumanoidRootPart.Position
 end; addFling()
 
